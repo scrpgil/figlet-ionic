@@ -34,26 +34,9 @@ export class HomePage {
                     console.dir(err);
                     return;
                 }
-                if(data == ""){
-                    continue;
-                }
                 this.aa_list.push("\n" + data);
             });
         }
-    }
-
-    craeteSvg(){
-        var cc = this.ascii.nativeElement.getContext('2d');
-        var DOMURL = self.URL;
-        var img = new Image();
-        var svg_data = this.svg_s + this.aa_data.nativeElement.innerHTML + this.svg_e;
-        var svg = new Blob([svg_data], {type: "image/svg+xml;charset=utf-8"});
-        var url = DOMURL.createObjectURL(svg);
-        img.onload = function() {
-            cc.drawImage(img, 0, 0);
-            DOMURL.revokeObjectURL(url);
-        };
-        img.src = url;
     }
     select(){
         this.update();
