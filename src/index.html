@@ -18,15 +18,18 @@
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
 
-  <!-- un-comment this code to enable service worker
+  <!-- un-comment this code to enable service worker-->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
         .then(() => console.log('service worker installed'))
         .catch(err => console.error('Error', err));
     }
-  </script>-->
+  </script>
 
+  <!-- STARTPCから見たらionic-labのページに飛ばす -->
+  <!--REDIRECT_SCRIPT-->
+  <!-- END:PCから見たらionic-labのページに飛ばす -->
   <link href="build/main.css" rel="stylesheet">
 
 </head>
