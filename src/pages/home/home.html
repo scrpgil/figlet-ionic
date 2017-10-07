@@ -1,14 +1,32 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Figlet Ionic
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Select Fonts</ion-label>
+      <ion-select multiple="true" [(ngModel)]="select_fonts" (ionChange)="select()">
+        <ng-container *ngFor="let font of fonts; let idx = index">
+          <ion-option value="{{font}}">{{font}}</ion-option>
+        </ng-container>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <input class="aa-text-input" placeholder="write now!" (keyup)="onKey($event)">
+  <div class="aa-list">
+    <ng-container *ngFor="let aa of aa_list; let idx = index">
+      <div class="aa-title">
+        {{fonts[idx]}}
+      </div>
+      <div class="aa">
+        {{aa}}
+      </div>
+    </ng-container>
+  </div>
 </ion-content>

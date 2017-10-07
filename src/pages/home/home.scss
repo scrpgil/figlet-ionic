@@ -1,3 +1,22 @@
 page-home {
-
+    .aa-title{
+        margin:20px 0px -20px;
+    }
+    .aa-list{
+        overflow: auto;
+    }
+    .select-text{
+        display: none;
+    }
+    .aa-text-input{
+        width:100%;
+    }
+    .aa{
+        white-space:pre-wrap;
+        font-family:"Monospace";
+        overflow: hidden;
+        width:1000px;
+        font-size:10px;
+        color:#000;
+    }
 }

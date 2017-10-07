@@ -1,6 +1,12 @@
 // http://ionicframework.com/docs/theming/
+@font-face {
+  font-family: 'Monospace';
+  src: url("../assets/fonts/Monospace.ttf");
+}
 
-
+html, body, ion-app,ion-content, .nav-decor {
+    font-family:"Monospace";
+}
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
